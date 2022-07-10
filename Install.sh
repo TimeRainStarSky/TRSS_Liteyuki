@@ -7,7 +7,7 @@ $R TRSS$Y Liteyuki$G Install$C Script$O
 $B——————————————————————————————
        ${G}作者：${C}时雨🌌星空$O"
 abort(){ echo "
-$R! $@$O";exit 1;}
+$R! $@$O";rm -rf "$0";exit 1;}
 DIR="$HOME/TRSS_Liteyuki"
 command -v pacman &>/dev/null&&echo "
 $Y- 正在安装依赖$O

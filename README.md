@@ -1,6 +1,6 @@
 # TRSS Liteyuki 轻雪机器人管理脚本
 [![Stars](https://img.shields.io/github/stars/TimeRainStarSky/TRSS_Liteyuki?color=yellow&label=收藏)](https://github.com/TimeRainStarSky/TRSS_Liteyuki/stargazers)
-[![Downloads](https://img.shields.io/github/downloads/TimeRainStarSky/TRSS_Liteyuki/total?color=blue&label=下载)](https://cdn.jsdelivr.net/gh/TimeRainStarSky/TRSS_Liteyuki@main/Install.sh)
+[![Downloads](https://img.shields.io/github/downloads/TimeRainStarSky/TRSS_Liteyuki/total?color=blue&label=下载)](https://gitee.com/TimeRainStarSky/TRSS_Liteyuki/raw/main/Install.sh)
 [![Releases](https://img.shields.io/github/v/release/TimeRainStarSky/TRSS_Liteyuki?color=green&label=发布版本)](https://github.com/TimeRainStarSky/TRSS_Liteyuki/releases/latest)  
 [![访问量](https://profile-counter.glitch.me/TimeRainStarSky-TRSS_Liteyuki/count.svg)](https://timerainstarsky.github.io/TRSS_Liteyuki)
 
@@ -12,7 +12,7 @@ bash -c "$(curl -L https://gitee.com/mo2/linux/raw/2/2)"
 
 2. 安装：
 ```
-curl -LO "https://cdn.jsdelivr.net/gh/TimeRainStarSky/TRSS_Liteyuki@main/Install.sh" && bash Install.sh
+curl -LO "https://gitee.com/TimeRainStarSky/TRSS_Liteyuki/raw/main/Install.sh" && bash Install.sh
 ```
 
 ## 使用说明
