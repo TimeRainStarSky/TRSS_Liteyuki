@@ -12,7 +12,7 @@ DIR="$HOME/TRSS_Liteyuki"
 command -v pacman &>/dev/null&&echo "
 $Y- 正在安装依赖$O
 "||abort "找不到pacman命令，请确认安装了正确的Arch Linux环境"
-pacman -Syu --noconfirm curl git nano perl tmux||abort "依赖安装失败"
+pacman -Syu --noconfirm curl git nano perl tmux whiptail||abort "依赖安装失败"
 abort_update(){ echo "
 $R! $@$O";[ "$N" -lt 8 ]&&{ let N++;download;}||abort "脚本下载失败，请检查网络，并尝试重新下载";}
 download(){ case "$N" in
