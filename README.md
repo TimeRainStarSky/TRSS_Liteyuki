@@ -16,7 +16,15 @@ curl -LO "https://gitee.com/TimeRainStarSky/TRSS_Liteyuki/raw/main/Install.sh" &
 ```
 
 ## 使用说明
-- 咕咕咕
+- NoneBot2 <-WS连接-> go-cqhttp <-网络连接-> QQ服务器
+- go-cqhttp：提供QQ账号管理，收发消息等功能
+- NoneBot2：对消息进行处理，完成目标操作
+
+## 常见问题：
+- 问：无法连接到反向 WebSocket Universal 服务器  
+答：请确认 Liteyuki 正常运行并启动了 Uvicorn WebSocket 服务器
+- 问：address already in use  
+答：WebSocket 端口被占用，请尝试停止占用进程、重启设备，或修改配置文件，更换 WebSocket 端口
 
 ## 联系方式
 - QQ群组：[211414032](https://jq.qq.com/?k=QU1xGLEB)
