@@ -36,7 +36,7 @@ curl -LO "https://gitee.com/TimeRainStarSky/TRSS_Liteyuki/raw/main/Install.sh" &
 
 - 问：open terminal failed: not a terminal
 - 答：
-  - 1.TMOE proot 容器首次启动会出现，退出容器重启就行了，推荐使用 chroot 容器
+  - 1.TMOE proot 容器首次启动会出现，退出容器重启就行了
   - 2.Windows 出现这种情况，是你使用的终端不支持 tmux，请换一个终端
 
 - 问：我有其他问题
