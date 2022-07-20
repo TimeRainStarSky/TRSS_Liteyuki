@@ -6,11 +6,11 @@
 
 ## 使用教程
 1. 准备：[Arch Linux](https://archlinux.org)
-- [Termux](https://github.com/hanxinhao000/ZeroTermux) 或 `其他 Linux 发行版` 推荐使用 [TMOE](https://gitee.com/mo2/linux) 安装 [Arch Linux](https://archlinux.org) 容器：
+- [Termux](https://github.com/hanxinhao000/ZeroTermux) 或`其他 Linux 发行版`推荐使用 [TMOE](https://gitee.com/mo2/linux) 安装 [Arch Linux](https://archlinux.org) 容器：
 ```
 bash -c "$(curl -L https://gitee.com/mo2/linux/raw/2/2)"
 ```
-- 有 `root 权限` 使用 `chroot 容器`，否则使用 `proot 容器`
+- 有`root 权限`使用`chroot 容器`，否则使用`proot 容器`
 - 进入 proot/chroot 容器：`tmoe p/c a`
 
 2. 安装：
