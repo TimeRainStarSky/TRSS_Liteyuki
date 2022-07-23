@@ -23,9 +23,9 @@ curl -LO "https://gitee.com/TimeRainStarSky/TRSS_Liteyuki/raw/main/Install.sh" &
 视频教程：https://b23.tv/av983453309
 
 ## 使用说明
-- NoneBot2 <-WS连接-> go-cqhttp <-网络连接-> QQ服务器
-- go-cqhttp：提供QQ账号管理，收发消息等功能
-- NoneBot2：对消息进行处理，完成目标操作
+- [NoneBot2](https://v2.nonebot.dev) <-WS连接-> [go-cqhttp](https://docs.go-cqhttp.org) <-网络连接-> [QQ服务器](https://im.qq.com)
+- [go-cqhttp](https://docs.go-cqhttp.org)：提供QQ账号管理，收发消息等功能
+- [NoneBot2](https://v2.nonebot.dev)：对消息进行处理，完成目标操作
 
 ## 常见问题
 - 问：无法连接到反向 WebSocket Universal 服务器
