@@ -53,8 +53,12 @@ curl -LO "https://gitee.com/TimeRainStarSky/TRSS_Liteyuki/raw/main/Install.sh" &
 - Telegram：[TimeRainStarSky](https://t.me/TimeRainStarSky)
 
 ## 界面展示
-[![主界面](https://cdn.jsdelivr.net/gh/TimeRainStarSky/TRSS_Liteyuki@main/Picture/Main.png)](https://TimeRainStarSky.GitHub.io/TRSS_Liteyuki)
-[![Liteyuki](https://cdn.jsdelivr.net/gh/TimeRainStarSky/TRSS_Liteyuki@main/Picture/Liteyuki.png)](https://github.com/snowyfirefly/Liteyuki-Bot)
+<a href="https://TimeRainStarSky.GitHub.io/TRSS_Liteyuki">
+  <img src="Picture/Main.png" alt="主界面">
+</a>
+<a href="https://github.com/snowyfirefly/Liteyuki-Bot">
+  <img src="Picture/Liteyuki.png" alt="Liteyuki">
+</a>
 
 ## 赞助支持
 - 爱发电：<https://afdian.net/@TimeRainStarSky>
