@@ -1,7 +1,6 @@
 <div align="center">
-  <a href="https://moegirl.org.cn/%E4%BA%9A%E6%89%98%E8%8E%89">
-    <img src="Picture/亚托莉.png" alt="亚托莉">
-  </a>
+
+[![亚托莉](Picture/亚托莉.png)](https://moegirl.org.cn/亚托莉)
 
 # TRSS Liteyuki
 轻雪机器人管理脚本
@@ -11,6 +10,7 @@
 [![Releases](https://img.shields.io/github/v/release/TimeRainStarSky/TRSS_Liteyuki?color=green&label=发布版本)](https://github.com/TimeRainStarSky/TRSS_Liteyuki/releases/latest)
 
 [![访问量](https://profile-counter.glitch.me/TimeRainStarSky-TRSS_Liteyuki/count.svg)](https://timerainstarsky.github.io/TRSS_Liteyuki)
+
 </div>
 
 ## 使用教程
@@ -62,12 +62,8 @@ curl -LO "https://gitee.com/TimeRainStarSky/TRSS_Liteyuki/raw/main/Install.sh" &
 - Telegram：[TimeRainStarSky](https://t.me/TimeRainStarSky)
 
 ## 界面展示
-<a href="https://TimeRainStarSky.GitHub.io/TRSS_Liteyuki">
-  <img src="Picture/Main.png" alt="主界面">
-</a>
-<a href="https://github.com/snowyfirefly/Liteyuki-Bot">
-  <img src="Picture/Liteyuki.png" alt="Liteyuki">
-</a>
+[![主界面](Picture/Main.png)](https://TimeRainStarSky.GitHub.io/TRSS_Liteyuki)
+[![Liteyuki](Picture/Liteyuki.png)](https://github.com/snowyfirefly/Liteyuki-Bot)
 
 ## 赞助支持
 - 爱发电：<https://afdian.net/@TimeRainStarSky>
