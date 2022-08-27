@@ -67,7 +67,7 @@ curl -LO "https://gitee.com/TimeRainStarSky/TRSS_Liteyuki/raw/main/Install.sh" &
 ## 界面展示
 [![主界面](Picture/Main.png)](https://github.com/TimeRainStarSky/TRSS_Liteyuki)
 [![Liteyuki](Picture/Liteyuki.png)](https://github.com/snowyfirefly/Liteyuki-Bot)
-[![Shigure](Picture/Shigure.png)](https://shigure.lgc2333.top)
+[![Zhongli](Picture/Zhongli.png)](https://github.com/Cloudawn/ZhongliBot)
 [![LittlePaimon](Picture/LittlePaimon.png)](https://blog.cherishmoon.fun/posts/littlepaimon-nonebot2.html)
 
 ## 赞助支持
