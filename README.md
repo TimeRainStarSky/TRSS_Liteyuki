@@ -20,8 +20,7 @@
 ```
 bash -c "$(curl -L https://gitee.com/mo2/linux/raw/2/2)"
 ```
-- 有`root 权限`使用`chroot 容器`，否则使用`proot 容器`
-- 进入 proot/chroot 容器：`tmoe p/c a`
+- 详细教程：<https://bilibili.com/read/cv18329305>
 
 2. 安装：
 ```
@@ -30,7 +29,7 @@ curl -LO "https://gitee.com/TimeRainStarSky/TRSS_Liteyuki/raw/main/Install.sh" &
 
 3. 启动：`tsly`
 
-视频教程：<https://b23.tv/av983453309>
+视频教程：<https://bilibili.com/av983453309>
 
 ## 使用说明
 - [NoneBot2](https://v2.nonebot.dev) <-WS连接-> [go-cqhttp](https://docs.go-cqhttp.org) <-网络连接-> [QQ服务器](https://im.qq.com)
