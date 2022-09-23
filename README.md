@@ -61,6 +61,10 @@ bash <(curl -L https://gitee.com/TimeRainStarSky/TRSS_Liteyuki/raw/main/Install.
 - QQ：[2536554304](https://qm.qq.com/cgi-bin/qm/qr?k=x8LtlP8vwZs7qLwmsbCsyLoAHy7Et1Pj)
 - Telegram：[TimeRainStarSky](https://t.me/TimeRainStarSky)
 
+## 赞助支持
+- 爱发电：<https://afdian.net/a/TimeRainStarSky>
+- Partme：<https://partme.com/TimeRainStarSky>
+
 ## 界面展示
 [![主界面](Picture/Main.png)](https://github.com/TimeRainStarSky/TRSS_Liteyuki)
 [![Liteyuki](Picture/Liteyuki.png)](https://github.com/snowyfirefly/Liteyuki-Bot)
@@ -72,7 +76,3 @@ bash <(curl -L https://gitee.com/TimeRainStarSky/TRSS_Liteyuki/raw/main/Install.
 [![TRSS Yunzai 管理脚本](https://github-readme-stats.vercel.app/api/pin/?username=TimeRainStarSky&repo=TRSS_Yunzai&show_owner=true)](../../../TRSS_Yunzai)
 [![TRSS Sagiri 管理脚本](https://github-readme-stats.vercel.app/api/pin/?username=TimeRainStarSky&repo=TRSS_Sagiri&show_owner=true)](../../../TRSS_Sagiri)
 [![TRSS OneBot 管理脚本](https://github-readme-stats.vercel.app/api/pin/?username=TimeRainStarSky&repo=TRSS_OneBot&show_owner=true)](../../../TRSS_OneBot)
-
-## 赞助支持
-- 爱发电：<https://afdian.net/@TimeRainStarSky>
-- Partme：<https://partme.com/TimeRainStarSky>
