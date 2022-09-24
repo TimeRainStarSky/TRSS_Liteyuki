@@ -273,13 +273,16 @@ echo 'FROM hub-mirror.c.163.com/library/archlinux
 COPY mirrorlist /etc/pacman.d
 COPY pacman.conf /etc
 COPY zh_CN /usr/share/i18n/locales
-COPY tsly /bin
 RUN pacman -Syy --noconfirm --needed --overwrite "*" archlinux-keyring archlinuxcn-keyring &&\
     pacman -Syu --noconfirm --needed --overwrite "*" curl git libnewt micro neofetch perl ranger tmux &&\
     sed -i "s/#zh_CN.UTF-8 UTF-8/zh_CN.UTF-8 UTF-8/g" /etc/locale.gen &&\
-    locale-gen &&\
-    chmod 755 /bin/tsly'>Dockerfile
+    locale-gen
+COPY tsly /bin
+RUN chmod 755 /bin/tsly'>Dockerfile
 docker build -t trss:liteyuki .||abort "Docker 容器构建失败"
+echo "
+$Y- 正在启动 Docker 容器$O
+"
 docker run -itd --name TRSS_Liteyuki -v "$DIR":/root/TRSS_Liteyuki --restart=always trss:liteyuki||abort "Docker 容器启动失败"
 echo -n "docker exec -it TRSS_Liteyuki bash '/root/TRSS_Liteyuki/Main.sh' "'"$@"'>/bin/tsly||abort "脚本执行命令/bin/tsly设置失败"
 chmod 755 /bin/tsly||abort "脚本权限设置失败"
