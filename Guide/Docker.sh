@@ -285,7 +285,7 @@ docker image prune -f
 echo "
 $Y- 正在启动 Docker 容器$O
 "
-docker run -Pd --name TRSS_Liteyuki -v "$DIR":/root/TRSS_Liteyuki --restart=always trss:liteyuki||abort "Docker 容器启动失败，若要重装容器，请先停止并删除已安装容器"
+docker run -itPd --name TRSS_Liteyuki -v "$DIR":/root/TRSS_Liteyuki --restart=always trss:liteyuki||abort "Docker 容器启动失败，若要重装容器，请先停止并删除已安装容器"
 echo -n "docker exec -it TRSS_Liteyuki bash '/root/TRSS_Liteyuki/Main.sh' "'"$@"'>/bin/tsly||abort "脚本执行命令/bin/tsly设置失败"
 chmod 755 /bin/tsly||abort "脚本权限设置失败"
 echo "
