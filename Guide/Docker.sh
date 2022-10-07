@@ -1,5 +1,5 @@
 #TRSS Liteyuki Docker 安装脚本 作者：时雨🌌星空
-NAME=v1.0.0;VERSION=202210040
+NAME=v1.0.0;VERSION=202210070
 R="[1;31m";G="[1;32m";Y="[1;33m";C="[1;36m";B="[1;m";O="[m"
 echo "$B———————————————————————————
 $R TRSS$Y Liteyuki$G Docker$C Script$O
@@ -268,7 +268,6 @@ END LC_ADDRESS
 LC_MEASUREMENT
 copy "i18n"
 END LC_MEASUREMENT'>zh_CN
-echo -n "bash '$DIR/Main.sh' "'"$@"'>tsly
 echo 'FROM hub-mirror.c.163.com/library/archlinux
 COPY mirrorlist /etc/pacman.d
 COPY pacman.conf /etc
@@ -278,8 +277,8 @@ RUN pacman -Syy --noconfirm --needed --overwrite "*" archlinux-keyring archlinux
     sed -i "s/#.*zh_CN\.UTF-8 UTF-8/zh_CN.UTF-8 UTF-8/g" /etc/locale.gen &&\
     locale-gen &&\
     rm -rf /var/cache
-COPY tsly /usr/local/bin
-RUN chmod 755 /usr/local/bin/tsly'>Dockerfile
+RUN echo -n '\''bash /root/TRSS_Liteyuki/Main.sh "$@"'\''>/usr/local/bin/tsly &&\
+    chmod 755 /usr/local/bin/tsly'>Dockerfile
 docker build -t trss:liteyuki .||abort "Docker 容器构建失败"
 docker image prune -f
 echo "
