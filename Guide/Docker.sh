@@ -290,4 +290,4 @@ $Y- 正在启动 Docker 容器$O
 docker run -itPd -h TRSS-Liteyuki --name TRSS_Liteyuki -v "$DIR":/root/TRSS_Liteyuki --restart=always trss:liteyuki||abort "Docker 容器启动失败，若要重装容器，请先停止并删除已安装容器"
 echo -n "docker exec -it TRSS_Liteyuki bash /root/TRSS_Liteyuki/Main.sh "'"$@"'>$CMDPATH/$CMD&&chmod 755 $CMDPATH/$CMD||abort "脚本执行命令 $CMDPATH/$CMD 设置失败，手动执行命令：docker exec -it TRSS_Liteyuki bash /root/TRSS_Liteyuki/Main.sh"
 echo "
-$G- Docker 容器安装完成，输入 $CMD 执行$O"
+$G- Docker 容器安装完成，启动命令：$CMD$O"
