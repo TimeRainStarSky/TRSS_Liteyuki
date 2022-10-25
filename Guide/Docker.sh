@@ -1,5 +1,5 @@
 #TRSS Liteyuki Docker 安装脚本 作者：时雨🌌星空
-NAME=v1.0.0;VERSION=202210250
+NAME=v1.0.0;VERSION=202210251
 R="[1;31m";G="[1;32m";Y="[1;33m";C="[1;36m";B="[1;m";O="[m"
 echo "$B———————————————————————————
 $R TRSS$Y Liteyuki$G Docker$C Script$O
@@ -55,10 +55,8 @@ mkdir -vp "$DIR"
 geturl "$URL/Main.sh">"$DIR/Main.sh"||abort_update "下载失败"
 [ "$(md5sum "$DIR/Main.sh"|head -c 32)" = "$MD5" ]||abort_update "下载文件校验错误"
 echo "
-$G- 脚本下载完成$O";}
-echo "
-$Y- 正在下载脚本$O";geturl(){ curl -L --retry 2 --connect-timeout 5 "$@";};N=1;download
-echo "
+$G- 脚本下载完成$O
+
 $Y- 正在构建 Docker 容器$O
 "
 mktmp&&cd "$TMP"
@@ -300,4 +298,6 @@ $Y- 正在启动 Docker 容器$O
 docker run -itPd -h TRSS-Liteyuki --name TRSS_Liteyuki -v "$DIR":/root/TRSS_Liteyuki --restart=always trss:liteyuki||abort "Docker 容器启动失败，若要重装容器，请先停止并删除已安装容器"
 echo -n "docker exec -it TRSS_Liteyuki bash /root/TRSS_Liteyuki/Main.sh "'"$@"'>"$CMDPATH/$CMD"&&chmod 755 "$CMDPATH/$CMD"||abort "脚本执行命令 $CMDPATH/$CMD 设置失败，手动执行命令：docker exec -it TRSS_Liteyuki bash /root/TRSS_Liteyuki/Main.sh"
 echo "
-$G- Docker 容器安装完成，启动命令：$CMD$O"
+$G- Docker 容器安装完成，启动命令：$CMD$O";exit;}
+echo "
+$Y- 正在下载脚本$O";geturl(){ curl -L --retry 2 --connect-timeout 5 "$@";};N=1;download
