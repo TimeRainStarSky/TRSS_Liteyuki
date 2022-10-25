@@ -1,5 +1,5 @@
 #TRSS Liteyuki Docker 安装脚本 作者：时雨🌌星空
-NAME=v1.0.0;VERSION=202210254
+NAME=v1.0.0;VERSION=202210255
 R="[1;31m";G="[1;32m";Y="[1;33m";C="[1;36m";B="[1;m";O="[m"
 echo "$B—————————————————————————————
 $R TRSS$Y Liteyuki$G Docker$C Script$O
@@ -286,7 +286,7 @@ RUN pacman -Syu --noconfirm --needed --overwrite "*" curl dialog git tmux perl m
     ln -vsf /usr/share/zoneinfo/Asia/Shanghai /etc/localtime &&\
     rm -rf /var/cache
 RUN echo -n '\''bash /root/TRSS_Liteyuki/Main.sh "$@"'\''>/usr/local/bin/tsly &&\
-    chmod 755 /usr/local/bin/tsly'>Dockerfile
+    chmod 755 /usr/local/bin/tsly'>>Dockerfile
 docker build -t trss:liteyuki .||abort "Docker 容器构建失败"
 docker image prune -f
 echo "
