@@ -1,14 +1,15 @@
 #TRSS Liteyuki Docker 安装脚本 作者：时雨🌌星空
-NAME=v1.0.0;VERSION=202210260
+NAME=v1.0.0;VERSION=202210280
 R="[1;31m";G="[1;32m";Y="[1;33m";C="[1;36m";B="[1;m";O="[m"
 echo "$B—————————————————————————————
 $R TRSS$Y Liteyuki$G Docker$C Script$O
      $G$NAME$C ($VERSION)$O
 $B—————————————————————————————
       ${G}作者：${C}时雨🌌星空$O"
-DIR="$HOME/TRSS_Liteyuki"
+DIR="${DIR:-$HOME/TRSS_Liteyuki}"
 CMD="${CMD:-tsly}"
 CMDPATH="${CMDPATH:-/usr/local/bin}"
+DKNAME="${DKNAME:-TRSS_Liteyuki}"
 abort(){ echo "
 $R! $@$O";exit 1;}
 mktmp(){ TMP="$DIR/tmp"&&rm -rf "$TMP"&&mkdir -p "$TMP"||abort "创建缓存文件夹失败";}
@@ -304,8 +305,8 @@ docker image prune -f
 echo "
 $Y- 正在启动 Docker 容器$O
 "
-docker run -itPd -h TRSS-Liteyuki --name TRSS_Liteyuki -v "$DIR":/root/TRSS_Liteyuki --restart=always trss:liteyuki||abort "Docker 容器启动失败，若要重装容器，请先停止并删除已安装容器"
-echo -n "docker exec -it TRSS_Liteyuki bash /root/TRSS_Liteyuki/Main.sh "'"$@"'>"$CMDPATH/$CMD"&&chmod 755 "$CMDPATH/$CMD"||abort "脚本执行命令 $CMDPATH/$CMD 设置失败，手动执行命令：docker exec -it TRSS_Liteyuki bash /root/TRSS_Liteyuki/Main.sh"
+docker run -itPd -h TRSS-Liteyuki --name $DKNAME -v "$DIR":/root/TRSS_Liteyuki --restart=always trss:liteyuki||abort "Docker 容器启动失败，若要重装容器，请先删除已安装容器，若要多开容器，请修改容器名"
+echo -n "docker exec -it $DKNAME bash /root/TRSS_Liteyuki/Main.sh "'"$@"'>"$CMDPATH/$CMD"&&chmod 755 "$CMDPATH/$CMD"||abort "脚本执行命令 $CMDPATH/$CMD 设置失败，手动执行命令：docker exec -it $DKNAME bash /root/TRSS_Liteyuki/Main.sh"
 echo "
 $G- Docker 容器安装完成，启动命令：$CMD$O";exit;}
 echo "
