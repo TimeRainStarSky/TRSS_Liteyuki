@@ -110,7 +110,8 @@ RUN echo "zh_CN.UTF-8 UTF-8">/etc/locale.gen\
  && pacman -Syu --noconfirm --needed --overwrite "*" curl dialog git tmux perl micro ranger fastfetch htop nethogs ncdu chromium ffmpeg python-poetry\
  && rm -rf /var/cache
 RUN echo -n '\''bash /root/TRSS_Liteyuki/Main.sh "$@"'\''>/usr/local/bin/tsly\
- && chmod 755 /usr/local/bin/tsly'>Dockerfile
+ && chmod 755 /usr/local/bin/tsly
+EXPOSE 13579'>Dockerfile
 docker build -t trss:liteyuki .||abort "Docker 容器构建失败"
 docker image prune -f
 echo "
