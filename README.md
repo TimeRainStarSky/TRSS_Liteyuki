@@ -6,6 +6,7 @@
 
 轻雪机器人管理脚本
 
+[![访问量](https://visitor-badge.glitch.me/badge?page_id=TimeRainStarSky.TRSS_Liteyuki&right_color=red&left_text=访%20问%20量)](https://github.com/TimeRainStarSky/TRSS_Liteyuki)
 [![Stars](https://img.shields.io/github/stars/TimeRainStarSky/TRSS_Liteyuki?color=yellow&label=收藏)](../../stargazers)
 [![Downloads](https://img.shields.io/github/downloads/TimeRainStarSky/TRSS_Liteyuki/total?color=blue&label=下载)](Install.sh)
 [![Releases](https://img.shields.io/github/v/release/TimeRainStarSky/TRSS_Liteyuki?color=green&label=发行版)](../../releases/latest)
