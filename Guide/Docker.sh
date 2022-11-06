@@ -31,7 +31,7 @@ $Y- 正在使用 官方脚本 安装 Docker$O
 "
   bash <(curl -L get.docker.com)||abort "官方脚本 执行失败，请自行安装 Docker 后重试：https://docker.com"
 fi
-docker info||{ systemctl enable --now docker&&docker version;}&&echo "
+docker info||{ systemctl enable --now docker&&docker info;}&&echo "
 $G- Docker 已启动$O"||abort "Docker 启动失败"
 abort_update(){ echo "
 $R! $@$O";[ "$N" -lt 10 ]&&{ let N++;download;}||abort "脚本下载失败，请检查网络，并尝试重新下载";}
