@@ -115,7 +115,7 @@ RUN echo "zh_CN.UTF-8 UTF-8">/etc/locale.gen\
  && pacman -Syu --noconfirm --needed --overwrite "*" curl dialog git tmux perl micro ranger fastfetch fish btop htop nethogs ncdu ack fzf bat ffmpeg chromium python-poetry\
  && { type ack &>/dev/null||ln -vsf vendor_perl/ack /usr/bin/ack;}\
  && { pacman -Rdd --noconfirm adobe-source-code-pro-fonts cantarell-fonts ttf-liberation;rm -rf /var/cache;}
-RUN echo -n '\''bash /root/TRSS_Liteyuki/Main.sh "$@"'\''>/usr/local/bin/tsly\
+RUN echo -n '\''exec bash /root/TRSS_Liteyuki/Main.sh "$@"'\''>/usr/local/bin/tsly\
  && chmod 755 /usr/local/bin/tsly
 EXPOSE 13579'>Dockerfile
 docker build -t trss:liteyuki .||abort "Docker 容器构建失败"
