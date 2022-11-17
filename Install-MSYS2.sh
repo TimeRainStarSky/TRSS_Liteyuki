@@ -1,5 +1,5 @@
 #TRSS Liteyuki MSYS2 安装脚本 作者：时雨🌌星空
-NAME=v1.0.0;VERSION=202211170
+NAME=v1.0.0;VERSION=202211171
 R="[1;31m";G="[1;32m";Y="[1;33m";C="[1;36m";B="[1;m";O="[m"
 echo "$B————————————————————————————
 $R TRSS$Y Liteyuki$G Install$C Script$O
@@ -46,7 +46,7 @@ type ffmpeg &>/dev/null||{ echo "
 $Y- 正在安装 FFmpeg$O
 "
 mktmp;geturl "$URL/BtbN/FFmpeg-Builds/releases/download/latest/ffmpeg-master-latest-win64-gpl-shared.zip">"$TMP/ffmpeg.zip"||abort "下载失败"
-unzip -o "$TMP/ffmpeg.zip" -d "$TMP"||abort "解压失败"
+unzip -oq "$TMP/ffmpeg.zip" -d "$TMP"||abort "解压失败"
 mv -vf "$TMP/ffmpeg-master-latest-win64-gpl-shared/bin/"* /usr/bin||abort "安装失败";}
 
 type chromium &>/dev/null||touch /usr/bin/chromium
