@@ -14,4 +14,4 @@
 bash <(curl -L gitee.com/TimeRainStarSky/TRSS_Liteyuki/raw/main/Install-MSYS2.sh)
 ```
 
-3. 启动：`tsyz`
+3. 启动：`tsly`
