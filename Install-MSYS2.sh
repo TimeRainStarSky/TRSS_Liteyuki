@@ -52,13 +52,6 @@ mktmp;geturl "$URL/BtbN/FFmpeg-Builds/releases/download/latest/ffmpeg-master-lat
 unzip -oq "$TMP/ffmpeg.zip" -d "$TMP"||abort "解压失败"
 mv -vf "$TMP/ffmpeg-master-latest-win64-gpl-shared/bin/"* /usr/bin||abort "安装失败";}
 
-type redis-server redis-cli &>/dev/null||{ echo "
-$Y- 正在安装 Redis$O
-"
-gitserver||exit
-mktmp;geturl "$URL/TimeRainStarSky/redis-windows/raw/master/redis-server.exe">"$TMP/redis-server.exe"&&geturl "$URL/TimeRainStarSky/redis-windows/raw/master/redis-cli.exe">"$TMP/redis-cli.exe"||abort "下载失败"
-mv -vf "$TMP/redis-server.exe" "$TMP/redis-cli.exe" /usr/bin;}
-
 type python &>/dev/null||{ echo "
 $Y- 正在安装 Python 3.10.8$O
 "
