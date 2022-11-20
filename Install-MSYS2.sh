@@ -1,5 +1,5 @@
 #TRSS Liteyuki MSYS2 安装脚本 作者：时雨🌌星空
-NAME=v1.0.0;VERSION=202211200
+NAME=v1.0.0;VERSION=202211210
 R="[1;31m";G="[1;32m";Y="[1;33m";C="[1;36m";B="[1;m";O="[m"
 echo "$B——————————————————————————————
 $R TRSS$Y Liteyuki$G Install$C Script$O
@@ -51,7 +51,7 @@ gitserver||exit
 mktmp
 geturl "$URL/BtbN/FFmpeg-Builds/releases/download/latest/ffmpeg-master-latest-win64-gpl-shared.zip">"$TMP/ffmpeg.zip"||abort "下载失败"
 unzip -oq "$TMP/ffmpeg.zip" -d "$TMP"||abort "解压失败"
-mv -vf "$TMP/ffmpeg-master-latest-win64-gpl-shared/bin/"* /usr/bin||abort "安装失败";}
+mv -vf "$TMP/"*/bin/* /usr/bin||abort "安装失败";}
 
 type python &>/dev/null||{ echo "
 $Y- 正在安装 Python 3.10.8$O
