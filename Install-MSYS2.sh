@@ -1,11 +1,11 @@
 #TRSS Liteyuki MSYS2 安装脚本 作者：时雨🌌星空
 NAME=v1.0.0;VERSION=202211200
 R="[1;31m";G="[1;32m";Y="[1;33m";C="[1;36m";B="[1;m";O="[m"
-echo "$B————————————————————————————
+echo "$B——————————————————————————————
 $R TRSS$Y Liteyuki$G Install$C Script$O
-     $G$NAME$C ($VERSION)$O
-$B————————————————————————————
-      $G作者：$C时雨🌌星空$O"
+      $G$NAME$C ($VERSION)$O
+$B——————————————————————————————
+       $G作者：$C时雨🌌星空$O"
 abort(){ echo "
 $R! $@$O";exit 1;}
 export LANG=zh_CN.UTF-8
@@ -64,9 +64,9 @@ unzip -oq /usr/share/python/*.zip -d /usr/share/python/lib&&\
 rm -vrf /usr/share/python/*.zip /usr/share/python/*._pth||abort "解压失败"
 echo -n "import sys
 import io
-sys.stdin = io.TextIOWrapper(sys.stdout.buffer,encoding='utf8')
+sys.stdin = io.TextIOWrapper(sys.stdin.buffer,encoding='utf8')
 sys.stdout = io.TextIOWrapper(sys.stdout.buffer,encoding='utf8')
-sys.stderr = io.TextIOWrapper(sys.stdout.buffer,encoding='utf8')">/usr/share/python/sitecustomize.py&&\
+sys.stderr = io.TextIOWrapper(sys.stderr.buffer,encoding='utf8')">/usr/share/python/sitecustomize.py&&\
 echo -n 'exec /usr/share/python/python "$@"'>/usr/bin/python||abort "安装失败";}
 
 type pip &>/dev/null||{ echo "
