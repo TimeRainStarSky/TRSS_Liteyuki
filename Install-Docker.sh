@@ -1,5 +1,5 @@
 #TRSS Liteyuki Docker 安装脚本 作者：时雨🌌星空
-NAME=v1.0.0;VERSION=202212230
+NAME=v1.0.0;VERSION=202212240
 R="[1;31m";G="[1;32m";Y="[1;33m";C="[1;36m";B="[1;m";O="[m"
 echo "$B—————————————————————————————
 $R TRSS$Y Liteyuki$G Docker$C Script$O
@@ -122,14 +122,13 @@ RUN echo "zh_CN.UTF-8 UTF-8">/etc/locale.gen\
  && pacman -Syu --noconfirm --needed --overwrite "*" curl dialog git tmux perl micro ranger fastfetch unzip fish btop htop nethogs ncdu ripgrep fd fzf bat catimg clash proxychains-ng lolcat ffmpeg chromium python-poetry\
  && { pacman -Rdd --noconfirm adobe-source-code-pro-fonts cantarell-fonts ttf-liberation;rm -rf /var/cache;}
 RUN echo -n '\''exec bash /root/TRSS_Liteyuki/Main.sh "$@"'\''>/usr/local/bin/tsly\
- && chmod 755 /usr/local/bin/tsly
-EXPOSE 13579'>Dockerfile
+ && chmod 755 /usr/local/bin/tsly'>Dockerfile
 docker build -t trss:liteyuki .||abort "Docker 容器构建失败"
 docker image prune -f
 echo "
 $Y- 正在启动 Docker 容器$O
 "
-docker run -itPd -h TRSS-Liteyuki --name $DKNAME -v "$DIR":/root/TRSS_Liteyuki --restart always trss:liteyuki||abort "Docker 容器启动失败，若要重装容器，请先删除已安装容器，若要多开容器，请修改容器名"
+docker run -itd -h TRSS-Liteyuki --name $DKNAME -v "$DIR":/root/TRSS_Liteyuki --restart always $([ $DKNAME = TRSS_Liteyuki ]&&echo "-p 13579:13579"||echo "-p 13579") trss:liteyuki||abort "Docker 容器启动失败，若要重装容器，请先删除已安装容器，若要多开容器，请修改容器名"
 mkdir -vp "$CMDPATH"&&echo -n "exec docker exec -it $DKNAME bash /root/TRSS_Liteyuki/Main.sh "'"$@"'>"$CMDPATH/$CMD"&&chmod 755 "$CMDPATH/$CMD"||abort "脚本执行命令 $CMDPATH/$CMD 设置失败，手动执行命令：docker exec -it $DKNAME bash /root/TRSS_Liteyuki/Main.sh"
 echo "
 $G- Docker 容器安装完成，启动命令：$CMD$O";exit;}
