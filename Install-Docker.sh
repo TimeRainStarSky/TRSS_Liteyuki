@@ -1,5 +1,5 @@
 #TRSS Liteyuki Docker 安装脚本 作者：时雨🌌星空
-NAME=v1.0.0;VERSION=202303150
+NAME=v1.0.0;VERSION=202303170
 R="[1;31m" G="[1;32m" Y="[1;33m" C="[1;36m" B="[1;m" O="[m"
 echo "$B—————————————————————————————
 $R TRSS$Y Liteyuki$G Docker$C Script$O
@@ -143,7 +143,8 @@ RUN ln -vsf /usr/share/zoneinfo/Asia/Shanghai /etc/localtime\
  && rm -rf /var/cache
 RUN echo -n '\''exec bash /root/TRSS_Liteyuki/Main.sh "$@"'\''>/usr/local/bin/tsly\
  && chmod 755 /usr/local/bin/tsly
-WORKDIR /root/TRSS_Liteyuki'>Dockerfile
+WORKDIR /root/TRSS_Liteyuki
+CMD ["bash","-c","bash AutoStart.sh;while bash Main.sh;do bash Main.sh docker;done"]'>Dockerfile
 docker build -t trss:liteyuki .||abort "Docker 容器构建失败"
 echo "
 $Y- 正在启动 Docker 容器$O
@@ -152,8 +153,8 @@ docker rm -f $DKNAME 2>/dev/null
 docker image prune -f
 docker run -itd -h TRSS-Liteyuki --name $DKNAME -v "$DIR":/root/TRSS_Liteyuki --restart always $([ $DKNAME = TRSS_Liteyuki ]&&echo "-p 13579:13579"||echo "-p 13579") trss:liteyuki||abort "Docker 容器启动失败"
 mkdir -vp "$CMDPATH"&&
-echo -n "exec docker exec -it $DKNAME bash Main.sh "'"$@"'>"$CMDPATH/$CMD"&&
-chmod 755 "$CMDPATH/$CMD"||abort "脚本执行命令 $CMDPATH/$CMD 设置失败，手动执行命令：docker exec -it $DKNAME bash Main.sh"
+echo -n 'if [ -n "$1" ];then exec docker exec -it '$DKNAME' bash Main.sh "$@";else exec docker attach '$DKNAME';fi'>"$CMDPATH/$CMD"&&
+chmod 755 "$CMDPATH/$CMD"||abort "脚本执行命令 $CMDPATH/$CMD 设置失败，手动执行命令：docker attach $DKNAME"
 echo "
 $G- Docker 容器安装完成，启动命令：$C$CMD$O";exit;}
 echo "
