@@ -1,5 +1,5 @@
 #TRSS Liteyuki MSYS2 安装脚本 作者：时雨🌌星空
-NAME=v1.0.0;VERSION=202303140
+NAME=v1.0.0;VERSION=202303190
 R="[1;31m" G="[1;32m" Y="[1;33m" C="[1;36m" B="[1;m" O="[m"
 echo "$B——————————————————————————————
 $R TRSS$Y Liteyuki$G Install$C Script$O
@@ -34,7 +34,7 @@ mkdir -vp /win&&
 git_clone "https://gitee.com/TimeRainStarSky/ffmpeg-windows" /win/ffmpeg||abort "下载失败"
 mkpath /win/ffmpeg/bin||abort "安装失败";}
 
-type python &>/dev/null||{ GETVER="3.10.9"
+type python &>/dev/null||{ GETVER="3.10.10"
 echo "
 $Y- 正在安装 Python $GETVER$O
 "
